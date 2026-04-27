@@ -1,184 +1,67 @@
 # Toronto Development Timeline Map
 
-This project is an interactive 3D timeline of Toronto's built form and development pipeline. It combines citywide 2025 3D massing data, historical 2015 massing, current planning application records, and selected OpenStreetMap building-part geometry into a browser-based map that can be scrubbed through time.
+This project builds an interactive 3D timeline map of Toronto development activity from public datasets. It combines Toronto 3D massing data, development application records, historical massing, and selected OpenStreetMap building-part geometry.
 
-The goal is to show not just where development applications exist, but how they change the perceived city model over time. Existing buildings are rendered as a muted base massing layer. Planned, approved, appealed, and refused applications appear as colored wireframes. Completed developments appear as solid green buildings using 2025 as-built massing geometry. Where possible, the map preserves detailed stepped or multipart building forms rather than reducing everything to a single extruded block.
+The map shows existing buildings as a 3D base layer, development applications as timeline-controlled overlays, and completed developments as green as-built massing where the data supports it.
 
-## Core Idea
+## What It Displays
 
-The map treats Toronto's 2025 3D massing dataset as the default city model. That means the base map starts from the most complete current representation available for the whole city.
+- A citywide 3D massing base.
+- Planned, approved, appealed, and refused applications as colored wireframes.
+- Completed developments as solid green 3D buildings.
+- Historical 2015 massing at development sites where a before-state is available.
+- Selected landmark and complex roof geometry as glTF models.
 
-For parcels that have development activity between 2015 and 2026, the pipeline changes the base behavior:
+The timeline slider changes which development states are visible by year.
 
-- Before completion, the site can show a 2015 "before" condition where 2015 massing is available.
-- During planning, the project appears as a colored wireframe.
-- Once complete, the base is hidden and the completed project appears as green 2025 as-built geometry.
+## Main Data Sources
 
-This creates a simple visual model:
+### Toronto 3D Massing
 
-```text
-2025 massing everywhere
-2015 replacement only at development sites
-wireframe for planned/future development
-green 2025 as-built geometry for completed development
-```
+The City of Toronto's [3D Massing](https://open.toronto.ca/dataset/3d-massing/) dataset is used as the current citywide building model and as the source for completed as-built development geometry.
 
-## Data Sources
+The 2015 massing data is used as a historical before-state at development sites where it is available.
 
-The project uses local Toronto Open Data exports and derived files:
+### Toronto Development Applications
 
-- `data/raw/3d-massing/`  
-  2025 citywide 3D massing shapefile. This is the universal base and the source for completed as-built geometry.
+The City of Toronto's [Development Applications](https://open.toronto.ca/dataset/development-applications/) records provide:
 
-- `data/raw/toronto_dev_apps.csv`  
-  Development application records with application numbers, statuses, descriptions, dates, and coordinates.
+- application number
+- address
+- submission date
+- status
+- description
+- point location
 
-- `data/raw/Development Pipeline.csv`  
-  Supplemental gross floor area and residential unit data.
+These records determine when projects appear in the timeline and how they are categorized.
 
-- `data/processed/massing_2015_osm.geojson`  
-  Historical 2015 massing enriched with OSM building parts. This is used only as the "before" state at development sites.
+### Development Pipeline
 
-- `pipeline/osm_full_*_cache.json`  
-  OpenStreetMap building-part, relation, roof, height, and stadium cache files used for detail enrichment.
+The City of Toronto's [Development Pipeline](https://www.toronto.ca/city-government/data-research-maps/research-reports/planning-development/development-pipeline/) adds supplemental project attributes where available, including gross floor area and residential unit counts.
 
-AIC/SKP model downloads are archived under `archive/aic/` and are not part of the active workflow.
+### OpenStreetMap
 
-## Processing Pipeline
+OpenStreetMap building-part data is used to add detail for some buildings with multipart or stepped geometry.
 
-The main pipeline is `pipeline/process.py`.
+## Current Behavior
 
-At a high level it:
+The current workflow uses 2025 massing as the default citywide base.
 
-1. Loads 2025 citywide massing.
-2. Loads 2015 historical massing.
-3. Loads and classifies development applications.
-4. Joins additional pipeline data such as GFA and residential units.
-5. Snaps application points to nearby 2025 footprints.
-6. Groups multiple applications into site timelines.
-7. Builds completed as-built geometry from 2025 massing.
-8. Builds a unified base layer that hides under completed development.
-9. Exports GeoJSON files for the frontend.
+At development sites:
 
-The tile generation step is handled by `pipeline/generate_tiles.py`, which converts large GeoJSON massing outputs into PMTiles vector tiles.
+- the base can show a 2015 before-state before completion
+- planned or active applications can appear as wireframes
+- completed applications can appear as green 2025 as-built geometry
 
-## Output Layers
+If a planned application does not have a completed counterpart in the available data, it remains an estimated-height wireframe.
 
-The active processed outputs are:
+## Known Data Limits
 
-- `data/processed/massing_base.geojson`
-- `data/processed/massing_base.pmtiles`
-- `data/processed/completed_asbuilt.geojson`
-- `data/processed/completed_asbuilt.pmtiles`
-- `data/processed/developments.geojson`
-- `data/processed/developments_detailed.geojson`
-- `data/processed/despawn_audit.json`
+The project depends on public datasets that are not always complete or consistent. Known limitations include:
 
-The browser renders these as:
-
-- Grey base massing from `massing_base.pmtiles`
-- Green completed buildings from `completed_asbuilt.pmtiles`
-- Colored wireframes from `developments.geojson`
-- Landmark glTF models from `web/models/landmarks.json`
-
-## Timeline Behavior
-
-The year slider controls which development phase is visible.
-
-For completed sites:
-
-- Before the completion year, the pre-development base remains visible.
-- At and after the completion year, the base despawns and the green 2025 as-built geometry appears.
-
-For planned, approved, or appealed sites without a completed entry:
-
-- The project appears as an estimated-height wireframe from its submission year onward.
-- Height is estimated from the maximum storey count parsed from the application description.
-
-For sites that have both planning and completed records:
-
-- The project appears as a wireframe during the planning period.
-- The wireframe uses the 2025 footprint and height so its shape matches the eventual completed building more closely.
-- At the completed year, the wireframe disappears and the green as-built geometry appears.
-
-For refused sites:
-
-- The project only appears in its submission year.
-
-## Why 2025 As-Built Geometry Matters
-
-Many completed developments are not well represented by a single application point or a simplified estimated extrusion. The 2025 massing dataset often contains multiple polygons for a single building, including podiums, towers, roof structures, and stepped forms.
-
-Using 2025 massing for completed development gives the map:
-
-- better building footprints
-- more accurate heights
-- multipart geometry
-- correct bases for stepped buildings
-- fewer generic block extrusions
-
-The pipeline includes guardrails to avoid accidentally assigning unrelated landmarks to development applications. For example, a low-rise application near the CN Tower should not be allowed to claim the CN Tower just because it is spatially nearby. Height-plausibility checks are used during footprint snapping, OSM enrichment, 2015 replacement tagging, and 2025 as-built selection.
-
-## Frontend
-
-The frontend lives in `web/`.
-
-It uses:
-
-- MapLibre GL JS for the base map and solid fill-extrusion buildings
-- deck.gl for development wireframes and glTF landmarks
-- PMTiles for efficient vector tile delivery
-- Carto Dark Matter as the basemap
-
-The main renderer is `web/map.js`.
-
-Completed buildings are rendered as MapLibre fill-extrusions so depth ordering works correctly. Wireframes are rendered with deck.gl because MapLibre fill-extrusions do not support the same wireframe styling.
-
-## Quality Checks
-
-The project includes a despawn audit:
-
-```bash
-scripts/audit_despawn.py
-```
-
-It checks every completed green as-built polygon against the base layer at that completion year. If visible base massing remains underneath a completed building, the audit reports it in:
-
-```text
-data/processed/despawn_audit.json
-```
-
-The expected complete-state audit result is:
-
-```text
-issue_count: 0
-invalid_pre_completion_wireframes: 0
-```
-
-## Rebuilding
-
-Run the full processing and QA workflow from the project root:
-
-```bash
-scripts/rebuild.sh
-```
-
-This runs:
-
-1. `pipeline/process.py`
-2. `pipeline/generate_tiles.py`
-3. `scripts/audit_despawn.py`
-
-The local server is provided by the top-level `serve.py` in the parent workspace and serves the app with HTTP range support for PMTiles.
-
-## Project Status
-
-The current architecture is centered on a stable 2025-first workflow:
-
-- 2025 massing is the citywide base.
-- 2015 massing is used surgically as the before-state at development sites.
-- Completed developments use 2025 as-built massing.
-- Planned-only developments remain estimated-height wireframes.
-- AIC/SKP model data is archived and excluded from active processing.
-
-The result is a map that favors citywide consistency, temporal clarity, and detailed real geometry where the source data supports it.
+- application coordinates can be approximate
+- one site can have multiple related application records
+- status values do not always describe physical construction state
+- proposed height is sometimes estimated from application text
+- historical massing coverage and detail vary by location
+- multipart sites can be difficult to match automatically
