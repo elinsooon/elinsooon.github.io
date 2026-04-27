@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toronto Traffic Flows</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="ui">
+    <h2>Toronto Traffic<br>Flows</h2>
+
+    <div class="control-group">
+      <label>Modes</label>
+      <div class="checkbox-group" id="mode-group">
+        <label class="mode-item" data-mode="cars">
+          <span class="swatch" style="background:#50b4ff"></span>
+          <input type="checkbox" value="cars" checked /> Cars
+        </label>
+        <label class="mode-item" data-mode="peds">
+          <span class="swatch" style="background:#ff69d2"></span>
+          <input type="checkbox" value="peds" checked /> Pedestrians
+        </label>
+        <label class="mode-item" data-mode="bikes">
+          <span class="swatch" style="background:#f5f5ff"></span>
+          <input type="checkbox" value="bikes" checked /> Bikes
+        </label>
+        <label class="mode-item" data-mode="transit">
+          <span class="swatch" style="background:#be78ff"></span>
+          <input type="checkbox" value="transit" checked /> Transit
+        </label>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Hour: <strong id="hour-label">12:00 PM</strong></label>
+      <input type="range" id="hour-slider" min="28" max="76" value="48" step="4" />
+      <div class="slider-ends">
+        <span>7:00 AM</span>
+        <span>7:00 PM</span>
+      </div>
+      <div class="time-presets">
+        <button class="preset-btn" data-hour="28">7 AM</button>
+        <button class="preset-btn" data-hour="32">AM Peak</button>
+        <button class="preset-btn" data-hour="48">Midday</button>
+        <button class="preset-btn" data-hour="68">PM Peak</button>
+        <button class="preset-btn" data-hour="76">7 PM</button>
+      </div>
+    </div>
+
+    <div id="count-display"></div>
+  </div>
+
+  <div id="tooltip"></div>
+  <div id="detail-panel"></div>
+
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script src="https://unpkg.com/pmtiles@3.2.1/dist/pmtiles.js"></script>
+  <script src="https://unpkg.com/deck.gl@9.1.0/dist.min.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+.DS_Store
+
+# Raw source data and local tooling should stay out of the Pages repo.
+/data/
+/cache/
+/.venv/
+/node_modules/

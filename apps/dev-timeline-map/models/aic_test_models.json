@@ -1,0 +1,90 @@
+[
+  {
+    "test": true,
+    "app_number": "18 149949 STE 27 SA",
+    "address": "121 AVENUE RD",
+    "year": 2018,
+    "status": "planned",
+    "lon": -79.3954479271092,
+    "lat": 43.67357802528153,
+    "height_m": 28.0,
+    "model_units_size": [
+      2317.9447021484375,
+      3429.4898643493652,
+      1944.8343505859375
+    ],
+    "model_units_center": [
+      300.31231689453125,
+      1682.1642475128174,
+      344.51190185546875
+    ],
+    "scale": 0.014397113045419107,
+    "model": "/dev-timeline-map/web/models/aic_test/18_149949_STE_27_SA_oDiHQvJeUIC8_TLzMj7n4Q_.glb"
+  },
+  {
+    "test": true,
+    "app_number": "15 171595 STE 32 OZ",
+    "address": "855 KINGSTON RD",
+    "year": 2015,
+    "status": "appealed",
+    "lon": -79.291036262502,
+    "lat": 43.68002910759988,
+    "height_m": 38.5,
+    "model_units_size": [
+      4925.556640625,
+      1911.3983154296875,
+      6883.858123779297
+    ],
+    "model_units_center": [
+      199.553955078125,
+      -310.14373779296875,
+      3158.4644927978516
+    ],
+    "scale": 0.0055927939402189725,
+    "model": "/dev-timeline-map/web/models/aic_test/15_171595_STE_32_OZ_9TVmpz8iVNpXmS72ay6oKw_.glb"
+  },
+  {
+    "test": true,
+    "app_number": "17 278384 STE 31 OZ",
+    "address": "2494 DANFORTH AVE",
+    "year": 2017,
+    "status": "completed",
+    "lon": -79.30354853654303,
+    "lat": 43.6881537557042,
+    "height_m": 7.4775,
+    "model_units_size": [
+      2692.9447321891785,
+      2791.8828125,
+      1854.371281709522
+    ],
+    "model_units_center": [
+      1338.8735811710358,
+      1395.94140625,
+      927.1450476218015
+    ],
+    "scale": 0.004032364000539625,
+    "model": "/dev-timeline-map/web/models/aic_test/17_278384_STE_31_OZ_nmOSWP_I6cQys3rRSEMiFg_.glb"
+  },
+  {
+    "test": true,
+    "app_number": "19 149036 NNY 18 OZ",
+    "address": "765 STEELES AVE",
+    "year": 2019,
+    "status": "completed",
+    "lon": -79.44278740710305,
+    "lat": 43.79237151158485,
+    "height_m": 53.291,
+    "model_units_size": [
+      3584.3508911132812,
+      1484.5088500976562,
+      5066.18359375
+    ],
+    "model_units_center": [
+      913.0965270996094,
+      297.3132019042969,
+      897.65869140625
+    ],
+    "scale": 0.010518963439410984,
+    "model": "/dev-timeline-map/web/models/aic_test/19_149036_NNY_18_OZ_CYWH9klLZqxDE2iJ025ozQ_.glb"
+  }
+]

@@ -1,0 +1,602 @@
+[
+  {
+    "id": "landmark_0000",
+    "name": "landmark_0000",
+    "lon": -79.39467046652861,
+    "lat": 43.67000978602136,
+    "max_height": 129.0,
+    "model": "/dev-timeline-map/web/models/landmark_0000.glb"
+  },
+  {
+    "id": "landmark_0001",
+    "name": "Fairmont Royal York Hotel",
+    "lon": -79.38164904355959,
+    "lat": 43.645854530095555,
+    "max_height": 114.0,
+    "model": "/dev-timeline-map/web/models/landmark_0001.glb"
+  },
+  {
+    "id": "landmark_0002",
+    "name": "Maple Leaf Square South",
+    "lon": -79.38143053143689,
+    "lat": 43.64160534751764,
+    "max_height": 228.0,
+    "model": "/dev-timeline-map/web/models/landmark_0002.glb"
+  },
+  {
+    "id": "landmark_0003",
+    "name": "landmark_0003",
+    "lon": -79.38766791644953,
+    "lat": 43.65165523099613,
+    "max_height": 85.3,
+    "model": "/dev-timeline-map/web/models/landmark_0003.glb"
+  },
+  {
+    "id": "landmark_0004",
+    "name": "landmark_0004",
+    "lon": -79.37571714592708,
+    "lat": 43.64613586867811,
+    "max_height": 202.0,
+    "model": "/dev-timeline-map/web/models/landmark_0004.glb"
+  },
+  {
+    "id": "landmark_0005",
+    "name": "landmark_0005",
+    "lon": -79.38160451308526,
+    "lat": 43.65287203078415,
+    "max_height": 120.0,
+    "model": "/dev-timeline-map/web/models/landmark_0005.glb"
+  },
+  {
+    "id": "landmark_0006",
+    "name": "landmark_0006",
+    "lon": -79.37239725638003,
+    "lat": 43.641548203769794,
+    "max_height": 42.0,
+    "model": "/dev-timeline-map/web/models/landmark_0006.glb"
+  },
+  {
+    "id": "landmark_0007",
+    "name": "landmark_0007",
+    "lon": -79.38708706451747,
+    "lat": 43.64258977902028,
+    "max_height": 553.0,
+    "model": "/dev-timeline-map/web/models/landmark_0007.glb"
+  },
+  {
+    "id": "landmark_0008",
+    "name": "landmark_0008",
+    "lon": -79.3773343,
+    "lat": 43.65494595,
+    "max_height": 79.25,
+    "model": "/dev-timeline-map/web/models/landmark_0008.glb"
+  },
+  {
+    "id": "landmark_0009",
+    "name": "landmark_0009",
+    "lon": -79.38185376071152,
+    "lat": 43.648341715735974,
+    "max_height": 298.0,
+    "model": "/dev-timeline-map/web/models/landmark_0009.glb"
+  },
+  {
+    "id": "landmark_0010",
+    "name": "landmark_0010",
+    "lon": -79.38058498583737,
+    "lat": 43.64516868116459,
+    "max_height": 32.5,
+    "model": "/dev-timeline-map/web/models/landmark_0010.glb"
+  },
+  {
+    "id": "landmark_0011",
+    "name": "landmark_0011",
+    "lon": -79.38400483446992,
+    "lat": 43.661629297358296,
+    "max_height": 154.0,
+    "model": "/dev-timeline-map/web/models/landmark_0011.glb"
+  },
+  {
+    "id": "landmark_0012",
+    "name": "landmark_0012",
+    "lon": -79.38549677230782,
+    "lat": 43.6451477118893,
+    "max_height": 239.87,
+    "model": "/dev-timeline-map/web/models/landmark_0012.glb"
+  },
+  {
+    "id": "landmark_0013",
+    "name": "landmark_0013",
+    "lon": -79.38283653343514,
+    "lat": 43.659419124404586,
+    "max_height": 272.0,
+    "model": "/dev-timeline-map/web/models/landmark_0013.glb"
+  },
+  {
+    "id": "landmark_0014",
+    "name": "landmark_0014",
+    "lon": -79.37214536482513,
+    "lat": 43.65008157851397,
+    "max_height": 38.0,
+    "model": "/dev-timeline-map/web/models/landmark_0014.glb"
+  },
+  {
+    "id": "landmark_0015",
+    "name": "landmark_0015",
+    "lon": -79.379865473181,
+    "lat": 43.64949767442053,
+    "max_height": 276.9,
+    "model": "/dev-timeline-map/web/models/landmark_0015.glb"
+  },
+  {
+    "id": "landmark_0016",
+    "name": "landmark_0016",
+    "lon": -79.37862698233114,
+    "lat": 43.643640037089064,
+    "max_height": 32.8,
+    "model": "/dev-timeline-map/web/models/landmark_0016.glb"
+  },
+  {
+    "id": "landmark_0017",
+    "name": "landmark_0017",
+    "lon": -79.25230384026146,
+    "lat": 43.77756861460845,
+    "max_height": 90.0,
+    "model": "/dev-timeline-map/web/models/landmark_0017.glb"
+  },
+  {
+    "id": "landmark_0018",
+    "name": "landmark_0018",
+    "lon": -79.3282698642284,
+    "lat": 43.7726324837108,
+    "max_height": 83.0,
+    "model": "/dev-timeline-map/web/models/landmark_0018.glb"
+  },
+  {
+    "id": "landmark_0019",
+    "name": "landmark_0019",
+    "lon": -79.47909286008239,
+    "lat": 43.62399812206096,
+    "max_height": 228.2,
+    "model": "/dev-timeline-map/web/models/landmark_0019.glb"
+  },
+  {
+    "id": "landmark_0020",
+    "name": "landmark_0020",
+    "lon": -79.39926440652667,
+    "lat": 43.664456021191,
+    "max_height": 63.0,
+    "model": "/dev-timeline-map/web/models/landmark_0020.glb"
+  },
+  {
+    "id": "landmark_0021",
+    "name": "landmark_0021",
+    "lon": -79.41407670602588,
+    "lat": 43.76654655488975,
+    "max_height": 87.0,
+    "model": "/dev-timeline-map/web/models/landmark_0021.glb"
+  },
+  {
+    "id": "landmark_0022",
+    "name": "landmark_0022",
+    "lon": -79.41245487056904,
+    "lat": 43.76485808588668,
+    "max_height": 97.0,
+    "model": "/dev-timeline-map/web/models/landmark_0022.glb"
+  },
+  {
+    "id": "landmark_0023",
+    "name": "landmark_0023",
+    "lon": -79.4262481771666,
+    "lat": 43.63100027875484,
+    "max_height": 33.0,
+    "model": "/dev-timeline-map/web/models/landmark_0023.glb"
+  },
+  {
+    "id": "landmark_0024",
+    "name": "landmark_0024",
+    "lon": -79.3739479660157,
+    "lat": 43.650426111572855,
+    "max_height": 92.9,
+    "model": "/dev-timeline-map/web/models/landmark_0024.glb"
+  },
+  {
+    "id": "landmark_0025",
+    "name": "landmark_0025",
+    "lon": -79.37866348910532,
+    "lat": 43.65216092967561,
+    "max_height": 34.0,
+    "model": "/dev-timeline-map/web/models/landmark_0025.glb"
+  },
+  {
+    "id": "landmark_0026",
+    "name": "landmark_0026",
+    "lon": -79.37865726129435,
+    "lat": 43.65232003986629,
+    "max_height": 112.0,
+    "model": "/dev-timeline-map/web/models/landmark_0026.glb"
+  },
+  {
+    "id": "landmark_0027",
+    "name": "landmark_0027",
+    "lon": -79.38317057336072,
+    "lat": 43.649827846635446,
+    "max_height": 188.0,
+    "model": "/dev-timeline-map/web/models/landmark_0027.glb"
+  },
+  {
+    "id": "landmark_0028",
+    "name": "landmark_0028",
+    "lon": -79.38555321993145,
+    "lat": 43.65195430239626,
+    "max_height": 34.0,
+    "model": "/dev-timeline-map/web/models/landmark_0028.glb"
+  },
+  {
+    "id": "landmark_0029",
+    "name": "landmark_0029",
+    "lon": -79.38754992287558,
+    "lat": 43.65167827834711,
+    "max_height": 97.8,
+    "model": "/dev-timeline-map/web/models/landmark_0029.glb"
+  },
+  {
+    "id": "landmark_0030",
+    "name": "landmark_0030",
+    "lon": -79.41268492153092,
+    "lat": 43.76866799850916,
+    "max_height": 81.0,
+    "model": "/dev-timeline-map/web/models/landmark_0030.glb"
+  },
+  {
+    "id": "landmark_0031",
+    "name": "landmark_0031",
+    "lon": -79.3956595317898,
+    "lat": 43.64696084622092,
+    "max_height": 52.0,
+    "model": "/dev-timeline-map/web/models/landmark_0031.glb"
+  },
+  {
+    "id": "landmark_0032",
+    "name": "landmark_0032",
+    "lon": -79.40367306699086,
+    "lat": 43.64508490693873,
+    "max_height": 55.0,
+    "model": "/dev-timeline-map/web/models/landmark_0032.glb"
+  },
+  {
+    "id": "landmark_0033",
+    "name": "landmark_0033",
+    "lon": -79.39188394911098,
+    "lat": 43.654228252554965,
+    "max_height": 38.0,
+    "model": "/dev-timeline-map/web/models/landmark_0033.glb"
+  },
+  {
+    "id": "landmark_0034",
+    "name": "landmark_0034",
+    "lon": -79.39165111240409,
+    "lat": 43.66240927225171,
+    "max_height": 70.0,
+    "model": "/dev-timeline-map/web/models/landmark_0034.glb"
+  },
+  {
+    "id": "landmark_0035",
+    "name": "landmark_0035",
+    "lon": -79.37665749873226,
+    "lat": 43.65379421602705,
+    "max_height": 51.0,
+    "model": "/dev-timeline-map/web/models/landmark_0035.glb"
+  },
+  {
+    "id": "landmark_0036",
+    "name": "landmark_0036",
+    "lon": -79.4047192224436,
+    "lat": 43.656900241138004,
+    "max_height": 35.0,
+    "model": "/dev-timeline-map/web/models/landmark_0036.glb"
+  },
+  {
+    "id": "landmark_0037",
+    "name": "landmark_0037",
+    "lon": -79.36260568215488,
+    "lat": 43.655774665983174,
+    "max_height": 30.0,
+    "model": "/dev-timeline-map/web/models/landmark_0037.glb"
+  },
+  {
+    "id": "landmark_0038",
+    "name": "landmark_0038",
+    "lon": -79.36303038167105,
+    "lat": 43.65579865215553,
+    "max_height": 32.0,
+    "model": "/dev-timeline-map/web/models/landmark_0038.glb"
+  },
+  {
+    "id": "landmark_0039",
+    "name": "landmark_0039",
+    "lon": -79.38115547809333,
+    "lat": 43.65779472319131,
+    "max_height": 51.0,
+    "model": "/dev-timeline-map/web/models/landmark_0039.glb"
+  },
+  {
+    "id": "landmark_0040",
+    "name": "landmark_0040",
+    "lon": -79.38030325758409,
+    "lat": 43.66219731603359,
+    "max_height": 40.0,
+    "model": "/dev-timeline-map/web/models/landmark_0040.glb"
+  },
+  {
+    "id": "landmark_0041",
+    "name": "landmark_0041",
+    "lon": -79.38820938979664,
+    "lat": 43.66000182839178,
+    "max_height": 81.0,
+    "model": "/dev-timeline-map/web/models/landmark_0041.glb"
+  },
+  {
+    "id": "landmark_0042",
+    "name": "landmark_0042",
+    "lon": -79.39103207022993,
+    "lat": 43.655523876383,
+    "max_height": 50.0,
+    "model": "/dev-timeline-map/web/models/landmark_0042.glb"
+  },
+  {
+    "id": "landmark_0043",
+    "name": "landmark_0043",
+    "lon": -79.39198200419628,
+    "lat": 43.65925187427375,
+    "max_height": 32.0,
+    "model": "/dev-timeline-map/web/models/landmark_0043.glb"
+  },
+  {
+    "id": "landmark_0044",
+    "name": "landmark_0044",
+    "lon": -79.40065493322747,
+    "lat": 43.659559912769176,
+    "max_height": 40.0,
+    "model": "/dev-timeline-map/web/models/landmark_0044.glb"
+  },
+  {
+    "id": "landmark_0045",
+    "name": "landmark_0045",
+    "lon": -79.4147461314767,
+    "lat": 43.653376370141885,
+    "max_height": 30.0,
+    "model": "/dev-timeline-map/web/models/landmark_0045.glb"
+  },
+  {
+    "id": "landmark_0046",
+    "name": "landmark_0046",
+    "lon": -79.43815374091386,
+    "lat": 43.650217536324824,
+    "max_height": 60.0,
+    "model": "/dev-timeline-map/web/models/landmark_0046.glb"
+  },
+  {
+    "id": "landmark_0047",
+    "name": "landmark_0047",
+    "lon": -79.38360916250048,
+    "lat": 43.663560095504245,
+    "max_height": 171.0,
+    "model": "/dev-timeline-map/web/models/landmark_0047.glb"
+  },
+  {
+    "id": "landmark_0048",
+    "name": "landmark_0048",
+    "lon": -79.38554849177667,
+    "lat": 43.66560349186573,
+    "max_height": 161.0,
+    "model": "/dev-timeline-map/web/models/landmark_0048.glb"
+  },
+  {
+    "id": "landmark_0049",
+    "name": "landmark_0049",
+    "lon": -79.38855148489489,
+    "lat": 43.66810943006332,
+    "max_height": 82.0,
+    "model": "/dev-timeline-map/web/models/landmark_0049.glb"
+  },
+  {
+    "id": "landmark_0050",
+    "name": "landmark_0050",
+    "lon": -79.38570292577312,
+    "lat": 43.669906667195285,
+    "max_height": 35.0,
+    "model": "/dev-timeline-map/web/models/landmark_0050.glb"
+  },
+  {
+    "id": "landmark_0051",
+    "name": "landmark_0051",
+    "lon": -79.39445571435523,
+    "lat": 43.668242717217986,
+    "max_height": 75.0,
+    "model": "/dev-timeline-map/web/models/landmark_0051.glb"
+  },
+  {
+    "id": "landmark_0052",
+    "name": "landmark_0052",
+    "lon": -79.38165592037629,
+    "lat": 43.669346248986145,
+    "max_height": 56.0,
+    "model": "/dev-timeline-map/web/models/landmark_0052.glb"
+  },
+  {
+    "id": "landmark_0053",
+    "name": "landmark_0053",
+    "lon": -79.38019951397841,
+    "lat": 43.67069631019649,
+    "max_height": 55.0,
+    "model": "/dev-timeline-map/web/models/landmark_0053.glb"
+  },
+  {
+    "id": "landmark_0054",
+    "name": "landmark_0054",
+    "lon": -79.37922419639037,
+    "lat": 43.66978052357532,
+    "max_height": 88.0,
+    "model": "/dev-timeline-map/web/models/landmark_0054.glb"
+  },
+  {
+    "id": "landmark_0055",
+    "name": "landmark_0055",
+    "lon": -79.37185016275184,
+    "lat": 43.671643747613224,
+    "max_height": 146.0,
+    "model": "/dev-timeline-map/web/models/landmark_0055.glb"
+  },
+  {
+    "id": "landmark_0056",
+    "name": "landmark_0056",
+    "lon": -79.38780452560529,
+    "lat": 43.67166192866529,
+    "max_height": 30.0,
+    "model": "/dev-timeline-map/web/models/landmark_0056.glb"
+  },
+  {
+    "id": "landmark_0057",
+    "name": "landmark_0057",
+    "lon": -79.39010721653469,
+    "lat": 43.67141797182841,
+    "max_height": 94.0,
+    "model": "/dev-timeline-map/web/models/landmark_0057.glb"
+  },
+  {
+    "id": "landmark_0058",
+    "name": "landmark_0058",
+    "lon": -79.47707692390146,
+    "lat": 43.62889731795823,
+    "max_height": 60.0,
+    "model": "/dev-timeline-map/web/models/landmark_0058.glb"
+  },
+  {
+    "id": "landmark_0059",
+    "name": "landmark_0059",
+    "lon": -79.48343143170686,
+    "lat": 43.62139528461054,
+    "max_height": 147.0,
+    "model": "/dev-timeline-map/web/models/landmark_0059.glb"
+  },
+  {
+    "id": "landmark_0060",
+    "name": "landmark_0060",
+    "lon": -79.39080679226664,
+    "lat": 43.680979076009315,
+    "max_height": 43.0,
+    "model": "/dev-timeline-map/web/models/landmark_0060.glb"
+  },
+  {
+    "id": "landmark_0061",
+    "name": "landmark_0061",
+    "lon": -79.40959216880857,
+    "lat": 43.67796766694309,
+    "max_height": 37.0,
+    "model": "/dev-timeline-map/web/models/landmark_0061.glb"
+  },
+  {
+    "id": "landmark_0062",
+    "name": "landmark_0062",
+    "lon": -79.40406137993996,
+    "lat": 43.69319960072962,
+    "max_height": 51.0,
+    "model": "/dev-timeline-map/web/models/landmark_0062.glb"
+  },
+  {
+    "id": "landmark_0063",
+    "name": "landmark_0063",
+    "lon": -79.39533498862889,
+    "lat": 43.66315117857025,
+    "max_height": 43.6,
+    "model": "/dev-timeline-map/web/models/landmark_0063.glb"
+  },
+  {
+    "id": "landmark_0064",
+    "name": "landmark_0064",
+    "lon": -79.42593205386913,
+    "lat": 43.66452922606667,
+    "max_height": 35.0,
+    "model": "/dev-timeline-map/web/models/landmark_0064.glb"
+  },
+  {
+    "id": "landmark_0065",
+    "name": "landmark_0065",
+    "lon": -79.38499066123083,
+    "lat": 43.76511852046105,
+    "max_height": 125.0,
+    "model": "/dev-timeline-map/web/models/landmark_0065.glb"
+  },
+  {
+    "id": "landmark_0066",
+    "name": "landmark_0066",
+    "lon": -79.38325473148593,
+    "lat": 43.76595287707255,
+    "max_height": 90.0,
+    "model": "/dev-timeline-map/web/models/landmark_0066.glb"
+  },
+  {
+    "id": "landmark_0067",
+    "name": "landmark_0067",
+    "lon": -79.42538023573151,
+    "lat": 43.63268833143643,
+    "max_height": 39.0,
+    "model": "/dev-timeline-map/web/models/landmark_0067.glb"
+  },
+  {
+    "id": "landmark_0068",
+    "name": "landmark_0068",
+    "lon": -79.23336147138288,
+    "lat": 43.789872822427824,
+    "max_height": 84.0,
+    "model": "/dev-timeline-map/web/models/landmark_0068.glb"
+  },
+  {
+    "id": "landmark_0069",
+    "name": "landmark_0069",
+    "lon": -79.41216342701468,
+    "lat": 43.76082455292216,
+    "max_height": 108.0,
+    "model": "/dev-timeline-map/web/models/landmark_0069.glb"
+  },
+  {
+    "id": "landmark_0070",
+    "name": "landmark_0070",
+    "lon": -79.4164236145988,
+    "lat": 43.781162268720415,
+    "max_height": 89.0,
+    "model": "/dev-timeline-map/web/models/landmark_0070.glb"
+  },
+  {
+    "id": "landmark_0071",
+    "name": "landmark_0071",
+    "lon": -79.41615918415421,
+    "lat": 43.780069039701154,
+    "max_height": 89.0,
+    "model": "/dev-timeline-map/web/models/landmark_0071.glb"
+  },
+  {
+    "id": "landmark_0072",
+    "name": "landmark_0072",
+    "lon": -79.3892595756802,
+    "lat": 43.64181744969589,
+    "max_height": 86.0,
+    "model": "/dev-timeline-map/web/models/landmark_0072.glb"
+  },
+  {
+    "id": "landmark_0073",
+    "name": "landmark_0073",
+    "lon": -79.37553289117552,
+    "lat": 43.66072380023582,
+    "max_height": 50.0,
+    "model": "/dev-timeline-map/web/models/landmark_0073.glb"
+  },
+  {
+    "id": "landmark_0074",
+    "name": "landmark_0074",
+    "lon": -79.34594350241677,
+    "lat": 43.67912198581873,
+    "max_height": 35.0,
+    "model": "/dev-timeline-map/web/models/landmark_0074.glb"
+  }
+]
