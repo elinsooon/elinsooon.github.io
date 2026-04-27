@@ -3,9 +3,21 @@ const escapeHtml = value => value
   .replaceAll("<", "&lt;")
   .replaceAll(">", "&gt;");
 
-const inlineMarkdown = value => escapeHtml(value)
-  .replace(/`([^`]+)`/g, "<code>$1</code>")
-  .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+const escapeAttribute = value => escapeHtml(value).replaceAll('"', "&quot;");
+
+function inlineMarkdown(value) {
+  const links = [];
+  const withLinkTokens = value.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, url) => {
+    const index = links.length;
+    links.push(`<a href="${escapeAttribute(url)}">${inlineMarkdown(label)}</a>`);
+    return `@@LINK_${index}@@`;
+  });
+
+  return escapeHtml(withLinkTokens)
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+    .replace(/@@LINK_(\d+)@@/g, (_, index) => links[Number(index)]);
+}
 
 function splitTableRow(line) {
   return line
