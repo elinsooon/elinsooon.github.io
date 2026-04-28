@@ -46,7 +46,7 @@ a {
 
 .brand {
   color: var(--accent-dark);
-  font-size: 1.02rem;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
   font-weight: 600;
   text-decoration: none;
 }
