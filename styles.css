@@ -55,7 +55,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  font-size: 0.92rem;
+  font-size: 1.1rem;
 }
 
 nav a,
@@ -68,6 +68,22 @@ nav a:hover,
 footer a:hover {
   color: var(--accent);
   text-decoration: underline;
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #ffffff;
+}
+
+.resume-link:hover {
+  background: var(--accent-dark);
+  color: #ffffff;
+  text-decoration: none;
 }
 
 main {
@@ -136,6 +152,14 @@ p {
   gap: 0;
   padding-top: 12px;
   border-top: 1px solid var(--rule);
+}
+
+.section-title {
+  color: var(--accent-dark);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  line-height: 1.15;
+  margin: 0 0 18px;
+  font-weight: 500;
 }
 
 .section-heading {
