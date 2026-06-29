@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NHL Prediction Model</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="../../">Max Elinson</a>
+    <nav>
+      <a href="../../assets/resume/Max_Elinson_Resume_May_2026.pdf">Resume</a>
+    </nav>
+  </header>
+  <main class="project-page">
+    <div class="project-top">
+      <a class="button" href="../../">Back</a>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/elinsooon/nhlmodel">View GitHub repository</a>
+      </div>
+    </div>
+
+    <article class="project-detail">
+      <p class="project-meta">Python / sports modeling / data engineering</p>
+      <h1>NHL Prediction Model</h1>
+      <p>
+        Leakage-safe Python pipeline for pregame NHL prediction using schedule,
+        boxscore, play-by-play, shot-quality, injury, goalie, and betting-market data.
+      </p>
+      <p>
+        Built a raw/bronze/silver parquet workflow, aligned 13K+ historical moneyline
+        rows to NHL game IDs, and evaluated pregame models against market baselines
+        with logloss, Brier score, AUC, calibration, and feature-family gating.
+      </p>
+
+      <div class="tech-tags" aria-label="Technologies">
+        <span>Python</span>
+        <span>pandas</span>
+        <span>parquet</span>
+        <span>scikit-learn</span>
+        <span>CatBoost</span>
+        <span>pytest</span>
+        <span>ruff</span>
+        <span>mypy</span>
+      </div>
+
+      <section>
+        <h2>Technical focus</h2>
+        <ul>
+          <li>Normalized NHL schedule, boxscore, play-by-play, shot-quality, injury, goalie, and market-odds sources into reusable parquet layers.</li>
+          <li>Designed pregame-only feature sets to avoid target leakage before puck drop.</li>
+          <li>Compared model outputs against market-implied probabilities instead of treating raw accuracy as the only benchmark.</li>
+          <li>Used validation-gated feature families so new signals had to improve logloss before entering the final holdout model.</li>
+        </ul>
+      </section>
+
+      <section class="project-visuals" aria-label="Project visuals">
+        <figure>
+          <img src="assets/pipeline.svg" alt="NHL prediction data pipeline diagram" />
+        </figure>
+        <figure>
+          <img src="assets/feature-gating.svg" alt="Feature-family gating validation chart" />
+        </figure>
+        <figure>
+          <img src="assets/model-vs-market.svg" alt="Model versus betting market holdout metrics" />
+        </figure>
+        <figure>
+          <img src="assets/odds-coverage.svg" alt="Historical odds coverage by season" />
+        </figure>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

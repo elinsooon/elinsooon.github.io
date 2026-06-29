@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Feature-family gating chart</title>
+  <desc id="desc">Validation logloss by candidate feature family for the full-game NHL model.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 30px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #4b5563; }
+      .axis { stroke: #cbd5e1; stroke-width: 1; }
+      .label { font: 600 14px system-ui, -apple-system, Segoe UI, sans-serif; fill: #334155; }
+      .value { font: 600 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #475569; }
+      .kept { fill: #16a34a; }
+      .rejected { fill: #94a3b8; }
+      .spine { fill: #2563eb; }
+      .note { font: 500 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #64748b; }
+      .badge { fill: #dcfce7; stroke: #86efac; rx: 12; }
+      .badgeText { font: 700 12px system-ui, -apple-system, Segoe UI, sans-serif; fill: #166534; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="560" />
+  <text class="title" x="48" y="56">Feature-Family Gating</text>
+  <text class="subtitle" x="48" y="84">Each candidate family is kept only if it improves validation logloss. Lower is better.</text>
+
+  <line class="axis" x1="310" y1="120" x2="310" y2="468" />
+  <line class="axis" x1="310" y1="468" x2="1110" y2="468" />
+
+  <text class="label" x="72" y="146">spine baseline</text>
+  <rect class="spine" x="310" y="127" width="530" height="24" rx="4" />
+  <text class="value" x="856" y="145">0.6564</text>
+
+  <text class="label" x="72" y="186">+ market</text>
+  <rect class="kept" x="310" y="167" width="415" height="24" rx="4" />
+  <rect class="badge" x="744" y="166" width="58" height="26" />
+  <text class="badgeText" x="758" y="184">kept</text>
+  <text class="value" x="817" y="185">0.6554</text>
+
+  <text class="label" x="72" y="226">+ xG</text>
+  <rect class="rejected" x="310" y="207" width="552" height="24" rx="4" />
+  <text class="value" x="878" y="225">0.6566</text>
+
+  <text class="label" x="72" y="266">+ confirmed goalie</text>
+  <rect class="rejected" x="310" y="247" width="586" height="24" rx="4" />
+  <text class="value" x="912" y="265">0.6569</text>
+
+  <text class="label" x="72" y="306">+ player priors</text>
+  <rect class="rejected" x="310" y="287" width="469" height="24" rx="4" />
+  <text class="value" x="795" y="305">0.6559</text>
+
+  <text class="label" x="72" y="346">+ special teams</text>
+  <rect class="rejected" x="310" y="327" width="441" height="24" rx="4" />
+  <text class="value" x="767" y="345">0.6557</text>
+
+  <text class="label" x="72" y="386">+ team context</text>
+  <rect class="kept" x="310" y="367" width="330" height="24" rx="4" />
+  <rect class="badge" x="659" y="366" width="58" height="26" />
+  <text class="badgeText" x="673" y="384">kept</text>
+  <text class="value" x="732" y="385">0.6547</text>
+
+  <text class="label" x="72" y="426">+ injuries</text>
+  <rect class="rejected" x="310" y="407" width="392" height="24" rx="4" />
+  <text class="value" x="718" y="425">0.6552</text>
+
+  <text class="note" x="48" y="512">2024-25 full-game holdout selected market odds and team-context features.</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">Model versus market metrics</title>
+  <desc id="desc">Holdout metrics comparing the NHL prediction model to betting market implied probabilities.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #4b5563; }
+      .label { font: 700 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .small { font: 500 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #64748b; }
+      .value { font: 700 18px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .card { fill: #ffffff; stroke: #d1d5db; stroke-width: 1.5; rx: 8; }
+      .model { fill: #2563eb; }
+      .market { fill: #16a34a; }
+      .axis { stroke: #cbd5e1; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="520" />
+  <text class="title" x="48" y="56">Model vs Market</text>
+  <text class="subtitle" x="48" y="84">2024-25 full-game holdout. Market remains a strong benchmark.</text>
+
+  <rect class="card" x="60" y="130" width="500" height="260" />
+  <text class="label" x="92" y="168">Logloss</text>
+  <text class="small" x="92" y="192">Lower is better</text>
+  <line class="axis" x1="92" y1="322" x2="500" y2="322" />
+  <rect class="model" x="130" y="214" width="120" height="108" rx="5" />
+  <rect class="market" x="330" y="208" width="120" height="114" rx="5" />
+  <text class="value" x="160" y="346">0.6612</text>
+  <text class="small" x="162" y="368">model</text>
+  <text class="value" x="360" y="346">0.6578</text>
+  <text class="small" x="358" y="368">market</text>
+
+  <rect class="card" x="640" y="130" width="500" height="260" />
+  <text class="label" x="672" y="168">AUC</text>
+  <text class="small" x="672" y="192">Higher is better</text>
+  <line class="axis" x1="672" y1="322" x2="1080" y2="322" />
+  <rect class="model" x="710" y="220" width="120" height="102" rx="5" />
+  <rect class="market" x="910" y="214" width="120" height="108" rx="5" />
+  <text class="value" x="740" y="346">0.6260</text>
+  <text class="small" x="742" y="368">model</text>
+  <text class="value" x="940" y="346">0.6346</text>
+  <text class="small" x="938" y="368">market</text>
+
+  <rect class="model" x="430" y="430" width="18" height="18" rx="3" />
+  <text class="small" x="456" y="444">family-gated model</text>
+  <rect class="market" x="610" y="430" width="18" height="18" rx="3" />
+  <text class="small" x="636" y="444">market-implied probability</text>
+  <text class="small" x="48" y="486">Interpretation: the model is useful for feature research, but the market is still the benchmark to beat.</text>
+</svg>

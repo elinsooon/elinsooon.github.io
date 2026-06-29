@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Historical odds coverage by season</title>
+  <desc id="desc">Bar chart showing BetExplorer moneyline rows collected by NHL season.</desc>
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 30px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #4b5563; }
+      .axis { stroke: #cbd5e1; stroke-width: 1; }
+      .bar { fill: #0f766e; }
+      .short { fill: #f59e0b; }
+      .label { font: 600 12px system-ui, -apple-system, Segoe UI, sans-serif; fill: #334155; }
+      .value { font: 700 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .note { font: 500 13px system-ui, -apple-system, Segoe UI, sans-serif; fill: #64748b; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="560" />
+  <text class="title" x="48" y="56">Historical Moneyline Coverage</text>
+  <text class="subtitle" x="48" y="84">BetExplorer full-game moneyline rows aligned to NHL game IDs</text>
+
+  <line class="axis" x1="92" y1="430" x2="1120" y2="430" />
+  <line class="axis" x1="92" y1="130" x2="92" y2="430" />
+
+  <rect class="bar" x="120" y="146" width="62" height="284" rx="4" />
+  <text class="value" x="131" y="138">1324</text>
+  <text class="label" x="118" y="456">2015-16</text>
+
+  <rect class="bar" x="218" y="147" width="62" height="283" rx="4" />
+  <text class="value" x="229" y="139">1320</text>
+  <text class="label" x="216" y="456">2016-17</text>
+
+  <rect class="bar" x="316" y="139" width="62" height="291" rx="4" />
+  <text class="value" x="327" y="131">1355</text>
+  <text class="label" x="314" y="456">2017-18</text>
+
+  <rect class="bar" x="414" y="138" width="62" height="292" rx="4" />
+  <text class="value" x="425" y="130">1358</text>
+  <text class="label" x="412" y="456">2018-19</text>
+
+  <rect class="bar" x="512" y="132" width="62" height="298" rx="4" />
+  <text class="value" x="523" y="124">1389</text>
+  <text class="label" x="510" y="456">2019-20</text>
+
+  <rect class="short" x="610" y="226" width="62" height="204" rx="4" />
+  <text class="value" x="625" y="218">952</text>
+  <text class="label" x="608" y="456">2020-21</text>
+
+  <rect class="bar" x="708" y="130" width="62" height="300" rx="4" />
+  <text class="value" x="719" y="122">1401</text>
+  <text class="label" x="706" y="456">2021-22</text>
+
+  <rect class="bar" x="806" y="130" width="62" height="300" rx="4" />
+  <text class="value" x="817" y="122">1400</text>
+  <text class="label" x="804" y="456">2022-23</text>
+
+  <rect class="bar" x="904" y="130" width="62" height="300" rx="4" />
+  <text class="value" x="915" y="122">1400</text>
+  <text class="label" x="902" y="456">2023-24</text>
+
+  <rect class="bar" x="1002" y="131" width="62" height="299" rx="4" />
+  <text class="value" x="1013" y="123">1398</text>
+  <text class="label" x="1000" y="456">2024-25</text>
+
+  <text class="note" x="48" y="512">Total: 13,117 normalized moneyline rows; game ID coverage: about 99.9%.</text>
+</svg>

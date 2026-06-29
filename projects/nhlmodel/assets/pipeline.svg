@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">NHL prediction data pipeline</title>
+  <desc id="desc">Diagram showing raw sports data sources flowing through bronze and silver parquet layers into feature families and model evaluation.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8fafc; }
+      .title { font: 700 30px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px system-ui, -apple-system, Segoe UI, sans-serif; fill: #4b5563; }
+      .label { font: 700 17px system-ui, -apple-system, Segoe UI, sans-serif; fill: #111827; }
+      .text { font: 500 14px system-ui, -apple-system, Segoe UI, sans-serif; fill: #374151; }
+      .small { font: 500 12px system-ui, -apple-system, Segoe UI, sans-serif; fill: #64748b; }
+      .box { fill: #ffffff; stroke: #d1d5db; stroke-width: 1.5; rx: 8; }
+      .source { fill: #eff6ff; stroke: #60a5fa; }
+      .data { fill: #ecfdf5; stroke: #34d399; }
+      .feature { fill: #fff7ed; stroke: #fb923c; }
+      .eval { fill: #f5f3ff; stroke: #a78bfa; }
+      .arrow { stroke: #475569; stroke-width: 2.2; fill: none; marker-end: url(#arrowhead); }
+      .chip { fill: #f1f5f9; stroke: #cbd5e1; rx: 14; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#475569" />
+    </marker>
+  </defs>
+  <rect class="bg" width="1200" height="520" />
+  <text class="title" x="48" y="54">NHL Prediction Model</text>
+  <text class="subtitle" x="48" y="82">Leakage-safe pregame pipeline from raw sports data to market-aware model evaluation</text>
+
+  <rect class="box source" x="48" y="130" width="235" height="250" />
+  <text class="label" x="72" y="164">Raw Sources</text>
+  <text class="text" x="72" y="202">NHL schedule / boxscore</text>
+  <text class="text" x="72" y="232">Play-by-play events</text>
+  <text class="text" x="72" y="262">MoneyPuck shot quality</text>
+  <text class="text" x="72" y="292">Injury timelines</text>
+  <text class="text" x="72" y="322">Goalie starters</text>
+  <text class="text" x="72" y="352">Historical market odds</text>
+
+  <rect class="box data" x="350" y="130" width="215" height="250" />
+  <text class="label" x="374" y="164">Data Layers</text>
+  <rect class="chip" x="374" y="194" width="144" height="32" />
+  <text class="text" x="395" y="215">raw files</text>
+  <rect class="chip" x="374" y="242" width="144" height="32" />
+  <text class="text" x="395" y="263">bronze parquet</text>
+  <rect class="chip" x="374" y="290" width="144" height="32" />
+  <text class="text" x="395" y="311">silver parquet</text>
+  <text class="small" x="374" y="352">Typed, reusable tables</text>
+
+  <rect class="box feature" x="632" y="130" width="235" height="250" />
+  <text class="label" x="656" y="164">Pregame Features</text>
+  <text class="text" x="656" y="202">Market probability</text>
+  <text class="text" x="656" y="232">Team context / rest</text>
+  <text class="text" x="656" y="262">xG and shot quality</text>
+  <text class="text" x="656" y="292">Goalie priors</text>
+  <text class="text" x="656" y="322">Injury counts</text>
+  <text class="text" x="656" y="352">Recent form</text>
+
+  <rect class="box eval" x="934" y="130" width="218" height="250" />
+  <text class="label" x="958" y="164">Evaluation</text>
+  <text class="text" x="958" y="202">Walk-forward splits</text>
+  <text class="text" x="958" y="232">Feature-family gating</text>
+  <text class="text" x="958" y="262">Logloss / Brier / AUC</text>
+  <text class="text" x="958" y="292">Calibration buckets</text>
+  <text class="text" x="958" y="322">Model vs market</text>
+
+  <path class="arrow" d="M283 255 H342" />
+  <path class="arrow" d="M565 255 H624" />
+  <path class="arrow" d="M867 255 H926" />
+
+  <text class="small" x="48" y="444">Result: 13K+ BetExplorer moneyline rows aligned to NHL game IDs with ~99.9% coverage.</text>
+  <text class="small" x="48" y="468">2024-25 full-game holdout: selected market + team context; logloss 0.6612, AUC 0.6260.</text>
+</svg>
