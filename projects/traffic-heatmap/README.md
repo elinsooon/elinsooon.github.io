@@ -1,34 +1,23 @@
 # Toronto Traffic Heatmap
 
-Toronto publishes detailed turning movement count data: observations of how many people, bikes, cars, buses, and trucks move through counted intersections at particular times of day. The records are rich, but they are also tabular and intersection-specific. It is difficult to look at the raw data and immediately understand the shape of traffic across the city.
+[Live app](https://elinsooon.github.io/apps/traffic-heatmap/) · [Source](../../apps/traffic-heatmap/)
 
-This project turns those counts into an animated map of daytime movement. Particles show multi-modal activity, while the road coloring gives a separate read on car traffic density. The emphasis is visual interpretation rather than microscopic traffic simulation: the map is meant to make broad hourly and corridor-level patterns easier to see.
+An animated map of Toronto movement from 7 AM to 7 PM, built from intersection turning movement counts and an OpenStreetMap road graph. Particles show activity across modes; road colors show relative car volume.
 
-## Sources
+The processed network contains 3,987 count locations and 43,763 directed segments. Time-slot flows and hourly route pools drive the animation. MapLibre GL and deck.gl handle rendering, while a Web Worker loads binary route pools with typed arrays and a JSON fallback.
 
-The primary source is the City of Toronto Open Data dataset [Traffic Volumes - Multimodal Intersection Turning Movement Counts](https://ckan0.cf.opendata.inter.prod-toronto.ca/ne/dataset/traffic-volumes-at-intersections-for-all-modes). In this project, the raw export is represented as:
+## Run locally
 
-```text
-data/tmc_raw_data_2020_2029.csv
+Requires Python 3. From the repository root:
+
+```sh
+python3 serve.py --port 8000
 ```
 
-The processed data keeps the observed modes available in the source records:
+Open [localhost:8000/apps/traffic-heatmap/](http://localhost:8000/apps/traffic-heatmap/). The frontend and processed assets are included; the Python preprocessing pipeline and raw exports are not. Browser libraries and basemaps require an internet connection.
 
-- cars
-- trucks and buses, shown together as transit/heavy vehicles
-- pedestrians
-- bikes
+## Data and interpretation
 
-The road geometry comes from OpenStreetMap. The project uses the OSM road graph to place the intersection counts onto actual directed road segments, so the final map reads as movement along streets rather than isolated points.
+The source is Toronto's [Traffic Volumes – Multimodal Intersection Turning Movement Counts](https://ckan0.cf.opendata.inter.prod-toronto.ca/ne/dataset/traffic-volumes-at-intersections-for-all-modes), combined with geometry from [OpenStreetMap contributors](https://www.openstreetmap.org/copyright).
 
-## Scope
-
-The map focuses on 7:00 AM through 7:00 PM. That choice reflects the available data: daytime records are substantially more useful for this visualization than the sparse overnight observations. A nighttime inference pass was explored during development, but it produced patterns that were not convincing enough to include in the main experience.
-
-The road-density coloring is based on car volumes. Other modes remain visible through particles, but they are intentionally not folded into the road heat colors. That keeps the heat layer closer to the everyday meaning of traffic density while still allowing pedestrians, bikes, and transit/heavy vehicles to be seen separately.
-
-## What To Look For
-
-The map is useful for comparing how activity changes over the day: morning peak, midday, afternoon peak, and the taper toward evening. It is also useful for noticing differences between corridors. Some roads stand out because they carry high car density; others show more of their activity through non-car particles.
-
-The result should be read as a data-informed visualization. It preserves the broad structure of the observed counts, but it does not claim to reconstruct exact individual trips, signal timing, lane behavior, or complete origin-destination demand.
+Counts are collected at particular locations and times, rather than as a synchronized citywide survey. Routes, particle speeds, and corridor smoothing are generated for the visualization. Inferred segment volumes are displayed with reduced intensity. The map does not reconstruct individual trips or measured congestion. The app's “Transit” category combines buses and trucks; it does not measure ridership. Overnight inference was excluded because the sparse observations did not support convincing patterns.

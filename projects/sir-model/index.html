@@ -3,26 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spatial SIR Model</title>
-  <link rel="stylesheet" href="../../styles.css" />
+  <meta name="description" content="A joint APM348 project with Ethan Kharitonov, extending a stochastic SIR epidemic model with individual movement between shared hubs, represented by Markov chains." />
+  <title>Spatial SIR Model with Individual Mobility · Max Elinson</title>
+  <link rel="stylesheet" href="../../styles.css?v=notes-minimal" />
 </head>
-<body>
+<body class="notes-page">
   <header class="site-header">
     <a class="brand" href="../../">Max Elinson</a>
-    <nav>
-      <a href="../../assets/resume/Max_Elinson_Resume_June_2026.pdf">Resume</a>
+    <nav aria-label="Main navigation">
+      <a href="../../assets/resume/Max_Elinson_Resume_October_2026.pdf">Resume</a>
     </nav>
   </header>
   <main class="project-page">
-    <div class="project-top">
-      <a class="button" href="../../">Back</a>
-      <div class="actions">
-        <a class="button primary" href="../../assets/sir-model/APM348_Final_Project.pdf">Report</a>
-        <a class="button" href="../../assets/sir-model/apm348_final_slides.pdf">Slides</a>
-      </div>
-    </div>
-    <article class="markdown" data-markdown="README.md"></article>
+    <article class="project-notes">
+      <h1>Spatial SIR Model with Individual Mobility</h1>
+      <p>A joint APM348 project with Ethan Kharitonov, extending a stochastic SIR epidemic model with individual movement between shared hubs, represented by Markov chains.</p>
+      <p>I contributed to the model formulation, state-space lumping analysis, and Python simulation code. I ran Monte Carlo experiments and analyzed outbreak-size distributions and sensitivity to initial conditions.</p>
+      <p>The simulations showed how hub-specific transmission and movement patterns affect final outbreak sizes, with substantial variation between runs. We developed a quotient-chain formulation, but direct computation remained impractical, so the experiments used simulation. The study used synthetic movement patterns.</p>
+      <nav class="notes-links" aria-label="Project links">
+        <a href="../../assets/sir-model/APM348_Final_Project.pdf">Report</a>
+        <a href="../../assets/sir-model/apm348_final_slides.pdf">Slides</a>
+        <a href="../../">All projects</a>
+      </nav>
+    </article>
   </main>
-  <script src="../../project-page.js"></script>
 </body>
 </html>
